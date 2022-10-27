@@ -4,6 +4,7 @@ use std::fs;
 use std::io;
 use std::os::unix::prelude::*;
 use std::path::Path;
+use std::os::fortanix_sgx::ffi::OsStrExt;
 
 #[allow(dead_code)]
 pub fn set_file_times(p: &Path, atime: FileTime, mtime: FileTime) -> io::Result<()> {
